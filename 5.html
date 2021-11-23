@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+    /**
+     * Функция принимает три аргумента. Первые два это числа, третий
+     * В результате возвращает значение математической операции двух первых
+     * аргументов.
+     * Если в качестве третьего аргумента был передан некорректный
+     * параметр функия возвращает NaN
+     * @param {number} arg1 - Первое число.
+     * @param {number} arg2 - Второе число.
+     * @param {string} operation - знак математической
+     * операции "+", "-", "*", "/"
+     */
+    function mathOperation(arg1, arg2, operation) {
+      if (operation === "+") {
+        return addition(arg1, arg2)
+      }
+      else if (operation === "-") {
+        return difference(arg1, arg2)
+      }
+      else if (operation === "*") {
+        return multiplication(arg1, arg2)
+      }
+      else if (operation === "/") {
+        return division(arg1, arg2)
+      }
+      else return NaN
+    };
+    /**
+     * Функция addition возвращает сумму двух чисел переданных в качестве
+     * аргументов функции
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     */
+    function addition(a, b) {
+      return a + b;
+    };
+    /**
+     * Функция difference возвращает разность двух чисел переданных в качестве
+     * аргументов функции. Из большего числа вычитает меньшее, либо
+     * возвращает 0, если числа равны.
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     */
+    function difference(a, b) {
+      if (a > b) {
+        return a - b
+      }
+      else if (a < b) {
+        return b - a
+      }
+      return 0;
+    };
+    /**
+     * Функция multiplication возвращает произведение двух чисел переданных
+     * в качестве аргументов функции
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     */
+    function multiplication(a, b) {
+      return a * b;
+    };
+    /**
+     * Функция division возвращает деление двух чисел переданных
+     * в качестве аргументов функции
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     */
+    function division(a, b) {
+      return a / b;
+    };
+
+    console.log(mathOperation(5, 7, "+"));
+    console.log(mathOperation(5, 8, "-"));
+    console.log(mathOperation(7, 3, "-"));
+    console.log(mathOperation(7, 7, "-"));
+    console.log(mathOperation(7, 7, "*"));
+    console.log(mathOperation(21, 3, "/"));
+    console.log(mathOperation(5, 3, ":)"));
+
+  </script>
+</body>
+
+</html>
