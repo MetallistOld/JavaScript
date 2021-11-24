@@ -38,44 +38,46 @@
      * аргументов функции
      * @param {number} a - Первое число.
      * @param {number} b - Второе число.
+     * @returns {number} Сумма чисел
      */
     function addition(a, b) {
       return a + b;
-    };
+    }
     /**
      * Функция difference возвращает разность двух чисел переданных в качестве
      * аргументов функции. Из большего числа вычитает меньшее, либо
      * возвращает 0, если числа равны.
      * @param {number} a - Первое число.
      * @param {number} b - Второе число.
+     * @returns {number} Разница чисел
      */
     function difference(a, b) {
       if (a > b) {
-        return a - b
+        return a - b;
       }
-      else if (a < b) {
-        return b - a
-      }
-      return 0;
-    };
+      return b - a;
+    }
     /**
      * Функция multiplication возвращает произведение двух чисел переданных
      * в качестве аргументов функции
      * @param {number} a - Первое число.
      * @param {number} b - Второе число.
+     * @returns {number} Произведение чисел
      */
     function multiplication(a, b) {
       return a * b;
-    };
+    }
     /**
      * Функция division возвращает деление двух чисел переданных
      * в качестве аргументов функции
      * @param {number} a - Первое число.
      * @param {number} b - Второе число.
+     * @returns {number} Деление чисел
      */
     function division(a, b) {
       return a / b;
-    };
+    }
+
     console.log(addition(5, 7));
     console.log(difference(5, 8));
     console.log(difference(7, 3));

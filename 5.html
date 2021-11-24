@@ -46,18 +46,18 @@ Infinity делать не нужно, однако, в случае если б
      */
     function mathOperation(arg1, arg2, operation) {
       if (operation === "+") {
-        return addition(arg1, arg2)
+        return addition(arg1, arg2);
       }
       else if (operation === "-") {
-        return difference(arg1, arg2)
+        return difference(arg1, arg2);
       }
       else if (operation === "*") {
-        return multiplication(arg1, arg2)
+        return multiplication(arg1, arg2);
       }
       else if (operation === "/") {
-        return division(arg1, arg2)
+        return division(arg1, arg2);
       }
-      else return NaN
+      return NaN;
     };
     /**
      * Функция addition возвращает сумму двух чисел переданных в качестве
@@ -77,10 +77,10 @@ Infinity делать не нужно, однако, в случае если б
      */
     function difference(a, b) {
       if (a > b) {
-        return a - b
+        return a - b;
       }
       else if (a < b) {
-        return b - a
+        return b - a;
       }
       return 0;
     };

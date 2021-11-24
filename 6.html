@@ -39,13 +39,11 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
       if (val > 10 && val < 20) return five;
       else {
         val = count % 10;
-        if (val == 1) return one;
+        if (val === 1) return one;
         else if (val > 1 && val < 5) {
-          return two
+          return two;
         }
-        else {
-          return five
-        };
+        return five;
       }
     }
 
